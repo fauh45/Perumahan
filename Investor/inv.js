@@ -67,6 +67,9 @@ function tostorage(harga1, harga2, jumlah) {
     localStorage.setItem('harga1', harga1);
     localStorage.setItem('harga2', harga2);
 
+    localStorage.setItem('jumlah1', jumlah[0]);
+    localStorage.setItem('jumlah2', jumlah[1]);
+
     // Set that the investor has used the menu
     localStorage.setItem('inv', true);
 
