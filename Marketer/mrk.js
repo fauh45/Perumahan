@@ -56,9 +56,10 @@ function calculateProfit(n1, n2) {
 // Trigger function to calculate profit
 function calculate() {
     // Get the input from user
-    var n1 = document.getElementById('ntipe1');
-    var n2 = document.getElementById('ntipe2');
+    var n1 = document.getElementById('ntipe1').value;
+    var n2 = document.getElementById('ntipe2').value;
 
     // Call profit calculation function, put it onto results place
-    document.getElementById('result').innerHTML = calculateProfit(n1, n2);
+    var temp = calculateProfit(n1, n2);
+    document.getElementById('result').innerHTML = temp;
 }
