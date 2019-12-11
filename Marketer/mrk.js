@@ -29,6 +29,7 @@ function showjumlah() {
 }
 
 // Adding harga with komisi
+// Function activated onClick
 function add() {
     // Getting the data from input
     // Put it onto global variable
