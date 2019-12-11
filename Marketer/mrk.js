@@ -37,8 +37,8 @@ function add() {
     komisi2 = document.getElementById('komisi2').value;
 
     // Adding them into localstorage
-    localStorage.getItem('komisi1') = komisi1;
-    localStorage.getItem('komisi2') = komisi2;
+    localStorage.setItem('komisi1', komisi1);
+    localStorage.setItem('komisi2', komisi2);
 
     // Checked off marketer
     localStorage.setItem('mrk', true);
