@@ -27,6 +27,8 @@ function checkLocalSorage() {
     }
 }
 
+checkLocalSorage();
+
 // Find the intersection of 2 lines
 // Input : Lines is expected to be array with the format of
 // [[A1, B1, C1], [A2, B2, C2]]

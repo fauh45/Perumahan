@@ -6,16 +6,18 @@ function checkLocalSorage() {
         window.location.href = 'index.html'; // Redirect back to home to initalize
     }
     // Check whether data from investor is set
-    else if (localStorage.getItem('inv') == false) {
+    else if (localStorage.getItem('inv') == 'false') {
         window.alert('Data dari investor belum ada');
         window.location.href = 'investor.html'; // Redirect to investor page
     }
     // Check whether data from marketer is set
-    else if (localStorage.getItem('mrk') == false) {
+    else if (localStorage.getItem('mrk') == 'false') {
         window.alert('Data dari marketer belum ada');
         window.location.href = 'marketer.html';
     }
 }
+
+checkLocalSorage();
 
 // Show the price from localstorage
 function showprice() {

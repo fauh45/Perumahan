@@ -10,11 +10,13 @@ function checkLocalSorage() {
         window.location.href = 'index.html'; // Redirect back to home to initalize
     }
     // Check whether data from investor is set
-    else if (localStorage.getItem('inv') == false) {
+    else if (localStorage.getItem('inv') == 'false') {
         window.alert('Data dari investor belum ada');
         window.location.href = 'investor.html'; // Redirect to investor page
     }
 }
+
+checkLocalSorage();
 
 // Show the price from localstorage
 function showprice() {
