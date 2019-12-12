@@ -56,7 +56,7 @@
 
 .menu {
 	padding-top: 150px;
-	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/bg.jpg');
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/bg.jpg');
 	background-size: 100% 100%;
 	height: 500px;
 	width: 100%;
@@ -363,42 +363,28 @@ img {
 
 /* wrapper 1050 */
 
-.tambahan-kiri{
-	width: 400px;
-	height: 100%;
+.tambahan {
+	width: 100%;
+	height: 300px;
+	margin: 15px 0px;
 }
 
-.tambahan-kanan{
-	width: 750px;
-	height: 100%;
-	float: right;
-}
-
-.tambahan img{
+.tambahan img {
 	float: left;
-	width: 40%;
+	width: 100%;
 	height: 15%;
 	margin-bottom: 20px;
 
 }
-.tambahan h4{
-	margin-top: 0px;
-	margin-left: 15px;
+
+.tambahan h1 {
+	padding: 10px 20px;
+	color: #ED3237;
 }
 
-.tambahan2 {
-	margin-top: 300px;
-}
-
-.tambahan2 img {
-	float: right;
-	width: 40%;
-	height: 15%;
-	margin-bottom: 20px;
-}
-
-.tambahan2 a {
-	float: left;
+.tambahan p {
+	padding: 10px 20px;
+	font-size: 20px;
 }
 
 .footer {
@@ -412,14 +398,15 @@ img {
 	font-size: small;
 }
 
-.menu-investor{
+.menu-investor {
 	width: 31%;
 	float: left;
 	background-color: white;
 	padding: 10px;
 }
 
-input[type=number], select {
+input[type=number],
+select {
 	width: 100%;
 	padding: 12px 20px;
 	margin: 8px 0;
@@ -444,7 +431,7 @@ input[type=submit]:hover {
 	background-color: #bf282d;
 }
 
-fieldset{
+fieldset {
 	border-color: #ED3237;
 	padding: 20px;
 }
