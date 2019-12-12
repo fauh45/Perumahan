@@ -32,7 +32,7 @@ function showjumlah() {
 }
 
 // Show the area of tipe rumah
-function showjumlah() {
+function showluas() {
     document.getElementById('luas1').innerHTML = localStorage.getItem('luas1');
     document.getElementById('luas2').innerHTML = localStorage.getItem('luas1');
 }
