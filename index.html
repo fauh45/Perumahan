@@ -2,124 +2,140 @@
 <html>
 
 <head>
-  <title>SALERO BUNDO KITO BASAMO</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="icon" href="images/logo2.png" type="image/gif">
+    <title>SALERO BUNDO KITO BASAMO</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" href="images/logo2.png" type="image/gif">
+    <script>
+        // Initialize the localstorage
+        if (localStorage.length == 0) {
+            localStorage.setItem('harga1', 0);
+            localStorage.setItem('harga2', 0);
+
+            localStorage.setItem('jumlah1', 0);
+            localStorage.setItem('jumlah2', 0);
+
+            localStorage.setItem('luas1', 0);
+            localStorage.setItem('luas2', 0);
+
+            localStorage.setItem('inv', false);
+            localStorage.setItem('mrk', false);
+        }
+    </script>
 </head>
 
 <body>
-  <div class="header">
-    <div class="wrapper">
-      <a href="index.html"><img src="images/logo.png"></a>
+    <div class="header">
+        <div class="wrapper">
+            <a href="index.html"><img src="images/logo.png"></a>
 
-      <ul class="navigation">
-        <a href="#">
-          <li>Home</li>
-        </a>
-        <a href="#">
-          <li>Investor</li>
-        </a>
-        <a href="#">
-          <li>Marketer</li>
-        </a>
-        <a href="#">
-          <li>Consumer</li>
-        </a>
-      </ul>
+            <ul class="navigation">
+                <a href="#">
+                    <li>Home</li>
+                </a>
+                <a href="#">
+                    <li>Investor</li>
+                </a>
+                <a href="#">
+                    <li>Marketer</li>
+                </a>
+                <a href="#">
+                    <li>Consumer</li>
+                </a>
+            </ul>
+        </div>
     </div>
-  </div>
 
-  <div class="menu">
-    <div class="menu-teks">
-      <span class="underline">Pilih menu sesuai jenis user anda.</span>
-    </div>
-    <div class="wrapper">
-
-      <!-- Hover #1 -->
-      <div class="box-1">
-          <a href="investor.html"><div class="btn btn-one">
-          <span>INVESTOR</span>
-        </div></a>
-      </div>
-
-      <!-- Hover #2 -->
-      <div class="box-2">
-        <div class="btn btn-two">
-          <span>MARKETER</span>
+    <div class="menu">
+        <div class="menu-teks">
+            <span class="underline">Pilih menu sesuai jenis user anda.</span>
         </div>
-      </div>
+        <div class="wrapper">
 
-      <!-- Hover #3 -->
-      <div class="box-3">
-        <div class="btn btn-three">
-          <span>CONSUMER</span>
+            <!-- Hover #1 -->
+            <div class="box-1">
+                <a href="investor.html">
+                    <div class="btn btn-one">
+                        <span>INVESTOR</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Hover #2 -->
+            <div class="box-2">
+                <div class="btn btn-two">
+                    <span>MARKETER</span>
+                </div>
+            </div>
+
+            <!-- Hover #3 -->
+            <div class="box-3">
+                <div class="btn btn-three">
+                    <span>CONSUMER</span>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-
-
-
-
-  <div class="wrapper" style="padding: 50px;">
-    <div class="tambahan">
-          <img src="images/5.jpg">
-          <h2 style="padding: 10px 0px; color: #ED3237;">Rumah Gadang</h2>
-          <p>Rumah Gadang adalah nama untuk rumah adat Minangkabau yang merupakan rumah tradisional dan banyak di jumpai di
-            provinsi Sumatra Barat, Indonesia. Rumah ini juga disebut dengan nama lain oleh masyarakat setempat dengan nama
-            Rumah Bagonjong atau ada juga yang menyebut dengan nama Rumah Baanjuang.</p>
-      </div>
-    <div class="tambahan2">
-      <img src="images/rumah1.jpg">
-      <h2 style="padding: 10px 0px; color: #ED3237;">Rumah Impian</h2>
-      <p>Modern House yang menjadi rumah impian anda ada di depan mata anda
-        Dengan rumah yang begitu inovative dan terlihat elegan serta membuat rumah ini menjadi berkelas di kelasnya
-      </p>
-    </div>
-  </div>
-
-
-  <div class="menuslide">
-    
-  </div>
-  <div class="slideshow">
-      <div class="slideshow-container">
-  
-        <div class="mySlides fade">
-          <div class="numbertext">1 / 3</div>
-          <img src="images/1.jpg" style="width:100%">
-          <div class="text">Rumah Gadang Nyantuy</div>
-        </div>
-  
-        <div class="mySlides fade">
-          <div class="numbertext">2 / 3</div>
-          <img src="images/2.jpg" style="width:100%">
-          <div class="text">Rumah Gadang Mewah</div>
-        </div>
-  
-        <div class="mySlides fade">
-          <div class="numbertext">3 / 3</div>
-          <img src="images/3.jpg" style="width:100%">
-          <div class="text">Rumah Gadang Legenda</div>
-        </div>
-  
-      </div>
-      <br>
-  
-      <div style="text-align:center">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-      </div>
     </div>
 
 
 
-  <br>
+
+    <div class="wrapper" style="padding: 50px;">
+        <div class="tambahan">
+            <img src="images/5.jpg">
+            <h2 style="padding: 10px 0px; color: #ED3237;">Rumah Gadang</h2>
+            <p>Rumah Gadang adalah nama untuk rumah adat Minangkabau yang merupakan rumah tradisional dan banyak di jumpai di provinsi Sumatra Barat, Indonesia. Rumah ini juga disebut dengan nama lain oleh masyarakat setempat dengan nama Rumah Bagonjong
+                atau ada juga yang menyebut dengan nama Rumah Baanjuang.</p>
+        </div>
+        <div class="tambahan2">
+            <img src="images/rumah1.jpg">
+            <h2 style="padding: 10px 0px; color: #ED3237;">Rumah Impian</h2>
+            <p>Modern House yang menjadi rumah impian anda ada di depan mata anda Dengan rumah yang begitu inovative dan terlihat elegan serta membuat rumah ini menjadi berkelas di kelasnya
+            </p>
+        </div>
+    </div>
+
+
+    <div class="menuslide">
+
+    </div>
+    <div class="slideshow">
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="images/1.jpg" style="width:100%">
+                <div class="text">Rumah Gadang Nyantuy</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="images/2.jpg" style="width:100%">
+                <div class="text">Rumah Gadang Mewah</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="images/3.jpg" style="width:100%">
+                <div class="text">Rumah Gadang Legenda</div>
+            </div>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+
+
+    <br>
 </body>
 <script src="js/script.js"></script>
 <div class="footer">
-  &copy; Copyright 2019
+    &copy; Copyright 2019
 </div>
 
 </html>
