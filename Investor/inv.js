@@ -18,6 +18,17 @@ var modal = 0;
 var maxpos = [];
 var maxprofit = 0;
 
+// Check the localstorage
+function checkLocalSorage() {
+    // Check whether localstorage is already set or not
+    if (localStorage.length == 0) {
+        window.alert('Data belum terinisialisasi');
+        window.location.href = 'index.html'; // Redirect back to home to initalize
+    }
+}
+
+checkLocalSorage();
+
 // Find the intersection of 2 lines
 // Input : Lines is expected to be array with the format of
 // [[A1, B1, C1], [A2, B2, C2]]
@@ -223,9 +234,9 @@ function calculate() {
     }
 
     // Shows calcultion result
-    document.getElementById('tipe1').innerHTML = "Tipe 1: " + maxpos[0];
-    document.getElementById('tipe2').innerHTML = "Tipe 2: " + maxpos[1];
-    document.getElementById('totalkeuntungan').innerHTML = "Keuntungan: " + maxprofit;
+    document.getElementById('tipe1').innerHTML = "Tipe 1: " + math.floor(maxpos[0]);
+    document.getElementById('tipe2').innerHTML = "Tipe 2: " + math.floor(maxpos[1]);
+    document.getElementById('totalkeuntungan').innerHTML = "Keuntungan: " + math.floor(maxprofit);
 
     // Calculate and put into localstorage
     tostorage((modal1 * (1 + (keuntungan1 / 100))), (modal2 * (1 + (keuntungan2 / 100))), maxpos);
