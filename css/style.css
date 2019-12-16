@@ -405,6 +405,13 @@ img {
 	padding: 10px;
 }
 
+.menu-marketer{
+	width: 48%;
+	float: left;
+	background-color: white;
+	padding: 10px;
+}
+
 input[type=number],
 select {
 	width: 100%;
