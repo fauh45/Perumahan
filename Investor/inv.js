@@ -49,7 +49,7 @@ function intersection(lines) {
 // Input : Value of pos in [x, y] and the multiplier of both x and y in [mx, my]
 // Output : Value of profit
 function calcprofit(pos, multiplier) {
-    return (pos[0] * multiplier[0] + pos[1] * multiplier[1]);
+    return ((Math.floor(pos[0]) * multiplier[0]) + (Math.floor(pos[1]) * multiplier[1]));
 }
 
 // Add user input into global variable
@@ -234,10 +234,15 @@ function calculate() {
     }
 
     // Shows calcultion result
-    document.getElementById('tipe1').innerHTML = "Tipe 1: " + math.floor(maxpos[0]);
-    document.getElementById('tipe2').innerHTML = "Tipe 2: " + math.floor(maxpos[1]);
-    document.getElementById('totalkeuntungan').innerHTML = "Keuntungan: " + math.floor(maxprofit);
+    // Check for null result
+    if (maxpos[0] == null) {
+        document.getElementById('totalkeuntungan').innerHTML = "Kalkulasi gagal, cek input";
+    } else {
+        document.getElementById('tipe1').innerHTML = "Tipe 1: " + Math.floor(maxpos[0]);
+        document.getElementById('tipe2').innerHTML = "Tipe 2: " + Math.floor(maxpos[1]);
+        document.getElementById('totalkeuntungan').innerHTML = "Keuntungan: " + Math.floor(calcprofit(maxpos, multiplier));
 
-    // Calculate and put into localstorage
-    tostorage((modal1 * (1 + (keuntungan1 / 100))), (modal2 * (1 + (keuntungan2 / 100))), maxpos);
+        // Calculate and put into localstorage
+        tostorage((modal1 * (1 + (keuntungan1 / 100))), (modal2 * (1 + (keuntungan2 / 100))), maxpos);
+    }
 }
