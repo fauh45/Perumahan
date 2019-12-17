@@ -122,7 +122,7 @@ function calculate() {
         [0, 1, 0]
     ]);
     //Check if intersection is in the range
-    if (temppos[0] + temppos[1] <= nrumah && temppos[0] >= 0 && temppos[1] >= 0 && luastanah1 * temppos[0] + luastanah2 * temppos[1] <= luas && modal1 * temppos[0] + modal2 * temppos[1] <= modal) {
+    if ((temppos[0] + temppos[1]) <= nrumah && temppos[0] >= 0 && temppos[1] >= 0 && ((luastanah1 * temppos[0]) + (luastanah2 * temppos[1])) <= luas && ((modal1 * temppos[0]) + (modal2 * temppos[1])) <= modal) {
         if (calcprofit(temppos, multiplier) > maxprofit) {
             maxpos = temppos;
             maxprofit = calcprofit(temppos, multiplier);
@@ -135,7 +135,7 @@ function calculate() {
         [0, 1, 0]
     ]);
     //Check if intersection is in the range
-    if (temppos[0] + temppos[1] <= nrumah && temppos[0] >= 0 && temppos[1] >= 0 && luastanah1 * temppos[0] + luastanah2 * temppos[1] <= luas && modal1 * temppos[0] + modal2 * temppos[1] <= modal) {
+    if ((temppos[0] + temppos[1]) <= nrumah && temppos[0] >= 0 && temppos[1] >= 0 && ((luastanah1 * temppos[0]) + (luastanah2 * temppos[1])) <= luas && ((modal1 * temppos[0]) + (modal2 * temppos[1])) <= modal) {
         if (calcprofit(temppos, multiplier) > maxprofit) {
             maxpos = temppos;
             maxprofit = calcprofit(temppos, multiplier);
@@ -147,7 +147,7 @@ function calculate() {
         [A3, B3, C3],
         [0, 1, 0]
     ]);
-    if (temppos[0] + temppos[1] <= nrumah && temppos[0] >= 0 && temppos[1] >= 0 && luastanah1 * temppos[0] + luastanah2 * temppos[1] <= luas) //Check if intersection is in the range
+    if ((temppos[0] + temppos[1]) <= nrumah && temppos[0] >= 0 && temppos[1] >= 0 && ((luastanah1 * temppos[0]) + (luastanah2 * temppos[1])) <= luas && ((modal1 * temppos[0]) + (modal2 * temppos[1])) <= modal) //Check if intersection is in the range
     {
         if (calcprofit(temppos, multiplier) > maxprofit) {
             maxpos = temppos;
@@ -161,7 +161,7 @@ function calculate() {
         [1, 0, 0]
     ]);
     //Check if intersection is in the range
-    if (temppos[0] + temppos[1] <= nrumah && temppos[0] >= 0 && temppos[1] >= 0 && luastanah1 * temppos[0] + luastanah2 * temppos[1] <= luas && modal1 * temppos[0] + modal2 * temppos[1] <= modal) {
+    if ((temppos[0] + temppos[1]) <= nrumah && temppos[0] >= 0 && temppos[1] >= 0 && ((luastanah1 * temppos[0]) + (luastanah2 * temppos[1])) <= luas && ((modal1 * temppos[0]) + (modal2 * temppos[1])) <= modal) {
         if (calcprofit(temppos, multiplier) > maxprofit) {
             maxpos = temppos;
             maxprofit = calcprofit(temppos, multiplier);
@@ -174,7 +174,7 @@ function calculate() {
         [1, 0, 0]
     ]);
     //Check if intersection is in the range
-    if (temppos[0] + temppos[1] <= nrumah && temppos[0] >= 0 && temppos[1] >= 0 && luastanah1 * temppos[0] + luastanah2 * temppos[1] <= luas && modal1 * temppos[0] + modal2 * temppos[1] <= modal) {
+    if ((temppos[0] + temppos[1]) <= nrumah && temppos[0] >= 0 && temppos[1] >= 0 && ((luastanah1 * temppos[0]) + (luastanah2 * temppos[1])) <= luas && ((modal1 * temppos[0]) + (modal2 * temppos[1])) <= modal) {
         if (calcprofit(temppos, multiplier) > maxprofit) {
             maxpos = temppos;
             maxprofit = calcprofit(temppos, multiplier);
@@ -186,7 +186,7 @@ function calculate() {
         [A3, B3, C3],
         [1, 0, 0]
     ]);
-    if (temppos[0] + temppos[1] <= nrumah && temppos[0] >= 0 && temppos[1] >= 0 && luastanah1 * temppos[0] + luastanah2 * temppos[1] <= luas) //Check if intersection is in the range
+    if ((temppos[0] + temppos[1]) <= nrumah && temppos[0] >= 0 && temppos[1] >= 0 && ((luastanah1 * temppos[0]) + (luastanah2 * temppos[1])) <= luas && ((modal1 * temppos[0]) + (modal2 * temppos[1])) <= modal) //Check if intersection is in the range
     {
         if (calcprofit(temppos, multiplier) > maxprofit) {
             maxpos = temppos;
@@ -200,7 +200,7 @@ function calculate() {
         [A2, B2, C2]
     ]);
     //Check if intersection is in the range
-    if (temppos[0] + temppos[1] <= nrumah && temppos[0] >= 0 && temppos[1] >= 0 && luastanah1 * temppos[0] + luastanah2 * temppos[1] <= luas && modal1 * temppos[0] + modal2 * temppos[1] <= modal) {
+    if ((temppos[0] + temppos[1]) <= nrumah && temppos[0] >= 0 && temppos[1] >= 0 && ((luastanah1 * temppos[0]) + (luastanah2 * temppos[1])) <= luas && ((modal1 * temppos[0]) + (modal2 * temppos[1])) <= modal) {
         if (calcprofit(temppos, multiplier) > maxprofit) {
             maxpos = temppos;
             maxprofit = calcprofit(temppos, multiplier);
@@ -213,7 +213,7 @@ function calculate() {
         [A3, B3, C3]
     ]);
     //Check if intersection is in the range
-    if (temppos[0] + temppos[1] <= nrumah && temppos[0] >= 0 && temppos[1] >= 0 && luastanah1 * temppos[0] + luastanah2 * temppos[1] <= luas && modal1 * temppos[0] + modal2 * temppos[1] <= modal) {
+    if ((temppos[0] + temppos[1]) <= nrumah && temppos[0] >= 0 && temppos[1] >= 0 && ((luastanah1 * temppos[0]) + (luastanah2 * temppos[1])) <= luas && ((modal1 * temppos[0]) + (modal2 * temppos[1])) <= modal) {
         if (calcprofit(temppos, multiplier) > maxprofit) {
             maxpos = temppos;
             maxprofit = calcprofit(temppos, multiplier);
@@ -226,7 +226,7 @@ function calculate() {
         [A2, B2, C2]
     ]);
     //Check if intersection is in the range
-    if (temppos[0] + temppos[1] <= nrumah && temppos[0] >= 0 && temppos[1] >= 0 && luastanah1 * temppos[0] + luastanah2 * temppos[1] <= luas && modal1 * temppos[0] + modal2 * temppos[1] <= modal) {
+    if ((temppos[0] + temppos[1]) <= nrumah && temppos[0] >= 0 && temppos[1] >= 0 && ((luastanah1 * temppos[0]) + (luastanah2 * temppos[1])) <= luas && ((modal1 * temppos[0]) + (modal2 * temppos[1])) <= modal) {
         if (calcprofit(temppos, multiplier) > maxprofit) {
             maxpos = temppos;
             maxprofit = calcprofit(temppos, multiplier);
