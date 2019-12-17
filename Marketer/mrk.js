@@ -27,7 +27,7 @@ function showprice() {
 // Show the avability of tipe rumah
 function showjumlah() {
     document.getElementById('jumlah1').innerHTML = localStorage.getItem('jumlah1');
-    document.getElementById('jumlah2').innerHTML = localStorage.getItem('jumlah1');
+    document.getElementById('jumlah2').innerHTML = localStorage.getItem('jumlah2');
 }
 
 // Adding harga with komisi
@@ -45,6 +45,9 @@ function add() {
     // Checked off marketer
     localStorage.setItem('mrk', true);
 
+    // Calculate and show
+    calculate();
+
     // Let user know
     window.alert('Data sudah masuk');
 }
@@ -55,18 +58,14 @@ function add() {
 // n2 (int) : number of prospected sold house for type 2
 // Output : Profit for the marketer
 function calculateProfitKomisi(n1, n2) {
-    // Get the data from localstorage
-    komisi1 = localStorage.getItem('komisi1');
-    komisi2 = localStorage.getItem('komisi2');
-
     return (n1 * komisi1) + (n2 * komisi2);
 }
 
 // Trigger function to calculate profit
 function calculate() {
-    // Get the input from user
-    var n1 = document.getElementById('ntipe1').value;
-    var n2 = document.getElementById('ntipe2').value;
+    // Get data from localstorage
+    var n1 = parseInt(localStorage.getItem('jumlah1'));
+    var n2 = parseInt(localStorage.getItem('jumlah2'));
 
     // Get data from localstorage
     var harga1 = parseInt(localStorage.getItem('harga1'));
