@@ -44,6 +44,9 @@ function add() {
 
     // Checked off marketer
     localStorage.setItem('mrk', true);
+
+    // Let user know
+    window.alert('Data sudah masuk');
 }
 
 // Calculate profit from the input
@@ -51,7 +54,11 @@ function add() {
 // n1 (int) : number of prospected sold house for type 1
 // n2 (int) : number of prospected sold house for type 2
 // Output : Profit for the marketer
-function calculateProfit(n1, n2) {
+function calculateProfitKomisi(n1, n2) {
+    // Get the data from localstorage
+    komisi1 = localStorage.getItem('komisi1');
+    komisi2 = localStorage.getItem('komisi2');
+
     return (n1 * komisi1) + (n2 * komisi2);
 }
 
@@ -61,7 +68,19 @@ function calculate() {
     var n1 = document.getElementById('ntipe1').value;
     var n2 = document.getElementById('ntipe2').value;
 
-    // Call profit calculation function, put it onto results place
-    var temp = calculateProfit(n1, n2);
-    document.getElementById('result').innerHTML = temp;
+    // Get data from localstorage
+    var harga1 = parseInt(localStorage.getItem('harga1'));
+    var harga2 = parseInt(localStorage.getItem('harga2'));
+
+    // Calculate profit, then put it into html
+    // Calculate total price of tipe 1
+    var totalTipe1 = (harga1 + komisi1) * n1;
+    var totalTipe2 = (harga2 + komisi2) * n2;
+
+    // Put it onto HTMl
+    document.getElementById('totaltipe1').innerHTML = totalTipe1;
+    document.getElementById('totaltipe2').innerHTML = totalTipe2;
+
+    document.getElementById('totalsemua').innerHTML = totalTipe1 + totalTipe2;
+    document.getElementById('totalkomisi').innerHTML = calculateProfitKomisi(n1, n2);
 }
