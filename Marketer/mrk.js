@@ -73,8 +73,8 @@ function calculate() {
 
     // Calculate profit, then put it into html
     // Calculate total price of tipe 1
-    var totalTipe1 = (harga1 + komisi1) * n1;
-    var totalTipe2 = (harga2 + komisi2) * n2;
+    var totalTipe1 = (harga1 * n1) + (komisi1 * n1);
+    var totalTipe2 = (harga2 * n2) + (komisi2 * n2);
 
     // Put it onto HTMl
     document.getElementById('totaltipe1').innerHTML = totalTipe1;
