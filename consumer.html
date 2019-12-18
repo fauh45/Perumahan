@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Consumer</title>
+    <link rel="stylesheet" href="css/user.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="images/logo2.png" type="image/gif">
     <script src="User/usr.js"></script>
@@ -20,18 +21,208 @@
                 <a href="index.html">
                     <li>Home</li>
                 </a>
-                <a href="#">
+                <a href="investor.html">
                     <li>Investor</li>
                 </a>
                 <a href="marketer.html">
                     <li>Marketer</li>
                 </a>
-                <a href="consumer.html">
+                <a href="#" style="background-color: #bf282d;">
                     <li>Consumer</li>
                 </a>
             </ul>
         </div>
     </div>
+
+
+    <div class='container' style="margin-top: 50px;">
+        <div class='background-element' id='background-element'>
+        </div>
+        <div class='highlight-window' id='product-img'>
+            <div class='highlight-overlay' id='highlight-overlay'></div>
+        </div>
+        <div class='window'>
+            <div class='main-content'>
+                <h1 style="color: black ;" id='hometitle'>RUMAH GADANG</h1>
+                <h3 id='homedesc'>typical minimalist home Padang</h3>
+                <div class='description' id='description'>
+                    Miliki rumah yang berbeda dari yang lain, tampil natural memiliki khas dari Sumatra Barat dan
+                    menjamin struktur yang sama, memiliki 6 kamar dan 3 kamar mandi dan juga ruang tamu yang sangat luas
+                </div>
+                <div class='highlight-window  mobile' id='product-img'>
+                    <div class='highlight-overlay' id='highlight-overlay-mobile'></div>
+                </div>
+                <div class='options'>
+                    <div class='color-options'>
+                        TIPE:
+                        <div class='color-picker'>
+                            <div class='color overlay' id='color-overlay'>
+                                <div class='check'></div>
+                            </div>
+                            <div class='color color-a' id='color-a'></div>
+                            <div class='color color-b' id='color-b'></div>
+                        </div>
+                        <span class='small' style='color:#457'>TIPE: <span id='color-name'>BLUES / 2V5</span></span>
+                    </div>
+                    <div class='size-picker'>
+                        <div class='range-picker' id='range-picker'>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class='divider'></div>
+
+                <div class='purchase-info'>
+                    <div class='price' id='harga'></div>
+                    <button onclick="beli();">BELI RUMAH</button>
+                    <input type="hidden" value="" id="sedia">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="inner-footer">
+            <div class="footer-items" style="width:40%">
+                <h1>Salero Bundo <br>Kito Basamo</h1>
+                <hr>
+                <br>
+                <p>
+                    Sebuah website yang diciptakan demi memenuhi kebutuhan orang-orang yang tertarik dengan rumah minang.
+                </p>
+            </div>
+
+            <div class="footer-items" style="width:16%">
+                <h2>Quick Links</h2>
+                <div class="border"></div>
+                <ul>
+                    <a href="index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="investor.html">
+                        <li>Investor</li>
+                    </a>
+                    <a href="marketer.html">
+                        <li>Marketer</li>
+                    </a>
+                    <a href="consumer.html">
+                        <li>Consumer</li>
+                    </a>
+                </ul>
+            </div>
+
+            <div class="footer-items" style="width:16%">
+                <h2>Tipe Rumah</h2>
+                <div class="border"></div>
+                <ul>
+                    <a href="">
+                        <li>Tipe Rumah 1</li>
+                    </a>
+                    <a href="">
+                        <li>Tipe Rumah 2</li>
+                    </a>
+                </ul>
+            </div>
+
+            <div class="footer-items" style="width:28%">
+                <h2>Contact Us</h2>
+                <div class="border"></div>
+                <ul>
+                    <li><i class="fa fa-map-marker" aria-hidden="true"></i>Bukittinggi belah sananya</li>
+                    <li><i class="fa fa-phone" aria-hidden="true"></i>Wajib COD</li>
+                    <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="http://www.fauh45.xyz/Perumahan">fauh45.xyz/Perumahan</a></li>
+                </ul>
+                <div class="social-media" style="text-align: left;">
+                    <a href="">
+                        <span style="font-size: 1.5em; color: white;">
+                            <i class="fab fa-instagram"></i> 001 
+                        </span>
+                    </a>
+                    <a href="">
+                        <span style="font-size: 1.5em; color: white;">
+                            013 
+                        </span>
+                    </a>
+                    <a href="">
+                        <span style="font-size: 1.5em; color: white;">
+                            026
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div style="padding: 30px;">
+            <hr style="width:1280px;">
+            <p style="margin-top: 20px;"><b>Copyright © 2010 - 2019</b> Polban. <b>All Rights Reserved</b></p>
+        </div>
+
+    </div>
+
+
+
+    <script>
+        function init() {
+            document.getElementById('harga').innerHTML = "Rp " + (parseInt(localStorage.getItem('harga2')) + parseInt(localStorage.getItem('komisi2'))) / 1000000 + " Juta"
+            document.getElementById('color-name').innerHTML = "Tipe 2, luas " + localStorage.getItem('luas2')
+            document.getElementById('hometitle').innerHTML = "Modern House"
+            document.getElementById('homedesc').innerHTML = "Elegant house classic style"
+            document.getElementById('description').innerHTML = "Rumah modern yang terlihat elegan, memiliki gaya yang sangat berkelas, mewah serta menawan. memiliki jiwa futuristik dan tampil kelasik dengan gaya elegan yang membuat rumah ini jadi semakin menawan dan bisa di bilang rumah ini adalah rumah terbaik pilihan kami setelah rumah gadang"
+            document.getElementById('sedia').value = localStorage.getItem('jumlah2');
+        }
+
+        init();
+
+        function beli() {
+            var sedia = document.getElementById('sedia').value;
+
+            if(sedia == 0)
+            {
+                window.alert('Rumah Tidak Tersedia');
+            }
+            else
+            {
+                window.alert('Rumah Tersedia, dan akan dikirim ke Rumah anda');
+            }
+        }
+        document.getElementById('range-picker').addEventListener('click', function (e) {
+            var sizeList = document.getElementById('range-picker').children;
+            for (var i = 0; i <= sizeList.length - 1; i++) {
+                console.log(sizeList[i].classList);
+                if (sizeList[i].classList.contains('active')) {
+                    sizeList[i].classList.remove('active');
+                }
+            }
+            e.target.classList.add('active');
+        })
+
+        document.getElementById('color-a').addEventListener('click', function () {
+            document.getElementById('color-overlay').style.transform = 'translateX(-0.5px)';
+            document.getElementById('background-element').style.backgroundColor = '#ED3237';
+            document.getElementById('highlight-overlay').style.opacity = '1';
+            document.getElementById('highlight-overlay-mobile').style.opacity = '1';
+            document.getElementById('color-name').innerHTML = "Tipe 1, luas " + localStorage.getItem('luas1');
+            document.getElementById('color-name').style.color = '#ed3237S'
+            document.getElementById('harga').innerHTML = "Rp " + (parseInt(localStorage.getItem('harga1')) + parseInt(localStorage.getItem('komisi1'))) / 1000000 + " Juta"
+            document.getElementById('hometitle').innerHTML = "Rumah Gadang"
+            document.getElementById('homedesc').innerHTML = "typical minimalist home padang"
+            document.getElementById('description').innerHTML = "Miliki rumah yang berbeda dari yang lain, tampil natural memiliki khas dari Sumatra Barat dan menjadi struktur yang sama, memiliki bentuk dan struktur yang khas dari sumatera barat "
+            document.getElementById('sedia').value = localStorage.getItem('jumlah1');
+        })
+        document.getElementById('color-b').addEventListener('click', function () {
+            document.getElementById('color-overlay').style.transform = 'translateX(45px)';
+            document.getElementById('background-element').style.backgroundColor = '#457';
+            document.getElementById('highlight-overlay').style.opacity = '0';
+            document.getElementById('highlight-overlay-mobile').style.opacity = '0';
+            document.getElementById('color-name').innerHTML = "Tipe 2, luas " + localStorage.getItem('luas2');
+            document.getElementById('color-name').style.color = '#457'
+            document.getElementById('harga').innerHTML = "Rp " + (parseInt(localStorage.getItem('harga2')) + parseInt(localStorage.getItem('komisi2'))) / 1000000 + " Juta"
+            document.getElementById('hometitle').innerHTML = "Modern House"
+            document.getElementById('homedesc').innerHTML = "Elegant house classic style"
+            document.getElementById('description').innerHTML = "Rumah modern yang terlihat elegan, memiliki gaya yang sangat berkelas, mewah serta menawan. memiliki jiwa futuristik dan tampil kelasik dengan gaya elegan yang membuat rumah ini jadi semakin menawan dan bisa di bilang rumah ini adalah rumah terbaik pilihan kami setelah rumah gadang"
+            document.getElementById('sedia').value = localStorage.getItem('jumlah2');
+        })
+    </script>
+
 
 </body>
 

@@ -40,7 +40,7 @@
 	display: table;
 }
 
-.navigation a:hover {
+.active, .navigation a:hover {
 	background-color: #bf282d;
 }
 
@@ -58,8 +58,10 @@
 	padding-top: 150px;
 	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/bg.jpg');
 	background-size: 100% 100%;
+	background-attachment: fixed;
 	height: 500px;
 	width: 100%;
+	
 }
 
 .menu-teks {
@@ -318,10 +320,6 @@ img {
 	transition: background-color 0.6s ease;
 }
 
-.active {
-	background-color: #717171;
-}
-
 /* Fading animation */
 .fade {
 	-webkit-animation-name: fade;
@@ -387,16 +385,90 @@ img {
 	font-size: 20px;
 }
 
+/* FOOTER */
+
 .footer {
-	position: relative;
+	display: block;
 	width: 100%;
 	background-color: #ED3237;
 	color: white;
-	text-align: center;
-	clear: both;
-	padding: 10px 0px;
-	font-size: small;
+	z-index: 9999;
 }
+
+.inner-footer{
+	width: 95%;
+	margin: auto;
+	padding: 30px 10px;
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	justify-content: center;
+}
+
+.footer-items{
+	width: 25%;
+	padding: 10px 20px;
+	box-sizing: border-box;
+}
+
+.footer-items p{
+	color: white;
+	text-align: justify;
+	line-height: 25px;
+}
+
+h1{
+	padding: 10px 0;
+	font-size: 25px;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+h2{
+	margin: 10px 0;
+	color: #fff;
+	font-size: 16px;
+	font-weight: lighter;
+	text-transform: uppercase;
+}
+
+.border{
+	height: 2px;
+	width: 40px;
+	background: #ff9800;
+}
+
+ul{
+	list-style: none;
+	color: #fff;
+	font-size: 15px;
+	letter-spacing: 0.5px;
+}
+
+ul a{
+	text-decoration: none;
+	outline: none;
+	color: #fff;
+	transition: 0.3s;
+}
+
+ul li{
+	margin: 10px 0;
+	height: 25px;
+}
+
+li i{
+	margin-right: 20px;
+}
+
+.social-media{
+	width: 100%;
+	color: #fff;
+	text-align: center;
+}
+
+/* AKHIR FOOTER */
+
 
 .menu-investor {
 	width: 31%;
@@ -432,6 +504,7 @@ input[type=submit] {
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
+	text-align: center;
 }
 
 input[type=submit]:hover {

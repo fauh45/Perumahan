@@ -240,7 +240,7 @@ function calculate() {
     } else {
         document.getElementById('tipe1').innerHTML = "Tipe 1: " + Math.floor(maxpos[0]);
         document.getElementById('tipe2').innerHTML = "Tipe 2: " + Math.floor(maxpos[1]);
-        document.getElementById('totalkeuntungan').innerHTML = "Keuntungan: " + Math.floor(calcprofit(maxpos, multiplier));
+        document.getElementById('totalkeuntungan').innerHTML = "Keuntungan: Rp. " + Math.floor(calcprofit(maxpos, multiplier));
 
         // Calculate and put into localstorage
         tostorage((modal1 * (1 + (keuntungan1 / 100))), (modal2 * (1 + (keuntungan2 / 100))), maxpos);

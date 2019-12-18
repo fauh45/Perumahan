@@ -77,9 +77,9 @@ function calculate() {
     var totalTipe2 = (harga2 * n2) + (komisi2 * n2);
 
     // Put it onto HTMl
-    document.getElementById('totaltipe1').innerHTML = totalTipe1;
-    document.getElementById('totaltipe2').innerHTML = totalTipe2;
+    document.getElementById('totaltipe1').innerHTML = 'Rp. '+totalTipe1;
+    document.getElementById('totaltipe2').innerHTML = 'Rp. '+totalTipe2;
 
-    document.getElementById('totalsemua').innerHTML = totalTipe1 + totalTipe2;
+    document.getElementById('totalsemua').innerHTML = 'Rp. '+(totalTipe1 + totalTipe2);
     document.getElementById('totalkomisi').innerHTML = calculateProfitKomisi(n1, n2);
 }

@@ -21,8 +21,8 @@ checkLocalSorage();
 
 // Show the price from localstorage
 function showprice() {
-    document.getElementById('harga1').innerHTML = localStorage.getItem('harga1') + localStorage.getItem('komisi1');
-    document.getElementById('harga2').innerHTML = localStorage.getItem('harga2') + localStorage.getItem('komisi1');
+    document.getElementById('harga1').innerHTML = parseInt(localStorage.getItem('harga1')) + parseInt(localStorage.getItem('komisi1'));
+    document.getElementById('harga2').innerHTML = parseInt(localStorage.getItem('harga2')) + parseInt(localStorage.getItem('komisi1'));
 }
 
 // Show the avability of tipe rumah

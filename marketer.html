@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="images/logo2.png" type="image/gif">
     <script src="Marketer/mrk.js"></script>
+    <link href="fontawesome/css/all.css" rel="stylesheet">
 </head>
 
 <body>
@@ -23,7 +24,7 @@
                 <a href="investor.html">
                     <li>Investor</li>
                 </a>
-                <a href="#">
+                <a href="#" style="background-color: #bf282d;">
                     <li>Marketer</li>
                 </a>
                 <a href="consumer.html">
@@ -33,7 +34,7 @@
         </div>
     </div>
 
-    <div class="wrapper">
+    <div class="wrapper" style="height:600px;">
         <div style="padding-top: 90px;">
             <h2 style="color: #ED3237;">Menu Marketer</h2>
         </div>
@@ -41,71 +42,128 @@
             <div class="menu-marketer">
                 <fieldset>
                     <legend>Komisi</legend>
+
                     <p>
                         <label>Komisi Tipe 1 : </label>
-                        <input type="number" id="komisi1" placeholder="Masukkan Jumlah Komisi Tipe 1... " />
+                        <input type="number" id="komisi1" min="0" placeholder="Masukkan Jumlah Komisi Tipe 1... " />
                     </p>
+                    <br>
                     <p>
-                        <label>Modal : </label>
-                        <input type="number" id="modal1" placeholder="Masukkan Modal Rumah 1... " />
+                        <label>Komisi Tipe 2 : </label>
+                        <input type="number" id="komisi2" min="0" placeholder="Masukkan Jumlah Komisi Tipe 2... " />
                     </p>
-                    <p>
-                        <label>Untung (%) : </label>
-                        <input type="number" id="keuntungan1" placeholder="Masukkan Persentase Keuntungan Rumah 1... " />
-                    </p>
-                </fieldset>
-                <br>
-                <fieldset>
-                    <legend>Tipe 2</legend>
-                    <p>
-                        <label>Luas Rumah : </label>
-                        <input type="number" id="luastanah2" placeholder="Masukkan Luas Rumah 2... " />
-                    </p>
-                    <p>
-                        <label>Modal : </label>
-                        <input type="number" id="modal2" placeholder="Masukkan Modal Rumah 2... " />
-                    </p>
-                    <p>
-                        <label>Untung (%) : </label>
-                        <input type="number" id="keuntungan2" placeholder="Masukkan Persentase Keuntung Rumah 2... " />
-                    </p>
+                    <br>
                     <input type="submit" onclick="add()" value="Add"></input>
                 </fieldset>
             </div>
 
             <div class="menu-marketer">
                 <fieldset>
-                    <legend>Jumlah Rumah</legend>
+                    <legend>Harga Rumah</legend>
+
                     <p>
-                        <label>Jumlah Rumah 1 : </label>
-                        <input type="number" id="ntipe1" placeholder="Masukkan Jumlah Komisi Tipe 1... " />
+                        Harga Tipe 1 : Rp. <span id="harga1"></span><br>
+                        Harga Tipe 2 : Rp. <span id="harga2"></span><br>
+                        Banyak Tipe 1 : <span id="jumlah1"></span><br>
+                        Banyak Tipe 2 : <span id="jumlah2"></span>
                     </p>
-                    <p>
-                        <label>Jumlah Rumah 2 : </label>
-                        <input type="number" id="ntipe2" placeholder="Masukkan Jumlah Komisi Tipe 2... " />
-                    </p>
-                    <input type="submit" onclick="calculate()" value="Calculate"></input>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Total Harga</legend>
+
+                    Tipe 1 : <span id="totaltipe1"></span><br>
+                    Tipe 2 : <span id="totaltipe2"></span><br>
+                    Semua : <span id="totalsemua"></span><br>
+                    Komisi : <span id="totalkomisi"></span><br>
+
+                    <script>
+                        showprice();
+                        showjumlah();
+                    </script>
                 </fieldset>
             </div>
 
-            <div class="menu-marketer">
-                    <fieldset>
-                            <legend>Jumlah Rumah</legend>
-                            <p>
-                                <label>Jumlah Rumah 1 : </label>
-                                <input type="number" id="ntipe1" placeholder="Masukkan Jumlah Komisi Tipe 1... " />
-                            </p>
-                            <p>
-                                <label>Jumlah Rumah 2 : </label>
-                                <input type="number" id="ntipe2" placeholder="Masukkan Jumlah Komisi Tipe 2... " />
-                            </p>
-                            <input type="submit" onclick="calculate()" value="Calculate"></input>
-                        </fieldset>
-            </div>
         </div>
     </div>
-    <div class="footer ">
-        &copy; Copyright 2019
+
+    <div class="footer">
+        <div class="inner-footer">
+            <div class="footer-items" style="width:40%">
+                <h1>Salero Bundo <br>Kito Basamo</h1>
+                <hr>
+                <br>
+                <p>
+                    Sebuah website yang diciptakan demi memenuhi kebutuhan orang-orang yang tertarik dengan rumah
+                    minang.
+                </p>
+            </div>
+
+            <div class="footer-items" style="width:16%">
+                <h2>Quick Links</h2>
+                <div class="border"></div>
+                <ul>
+                    <a href="index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="investor.html">
+                        <li>Investor</li>
+                    </a>
+                    <a href="marketer.html">
+                        <li>Marketer</li>
+                    </a>
+                    <a href="consumer.html">
+                        <li>Consumer</li>
+                    </a>
+                </ul>
+            </div>
+
+            <div class="footer-items" style="width:16%">
+                <h2>Tipe Rumah</h2>
+                <div class="border"></div>
+                <ul>
+                    <a href="">
+                        <li>Tipe Rumah 1</li>
+                    </a>
+                    <a href="">
+                        <li>Tipe Rumah 2</li>
+                    </a>
+                </ul>
+            </div>
+
+            <div class="footer-items" style="width:28%">
+                <h2>Contact Us</h2>
+                <div class="border"></div>
+                <ul>
+                    <li><i class="fa fa-map-marker" aria-hidden="true"></i>Bukittinggi belah sananya</li>
+                    <li><i class="fa fa-phone" aria-hidden="true"></i>Wajib COD</li>
+                    <li><i class="fa fa-envelope" aria-hidden="true"></i><a
+                            href="http://www.fauh45.xyz/Perumahan">fauh45.xyz/Perumahan</a></li>
+                </ul>
+                <div class="social-media" style="text-align: left;">
+                    <a href="">
+                        <span style="font-size: 1.5em; color: white;">
+                            <i class="fab fa-instagram"></i> 001
+                        </span>
+                    </a>
+                    <a href="">
+                        <span style="font-size: 1.5em; color: white;">
+                            013
+                        </span>
+                    </a>
+                    <a href="">
+                        <span style="font-size: 1.5em; color: white;">
+                            026
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div style="padding: 30px;">
+            <hr style="width:1280px;">
+            <p style="margin-top: 20px;"><b>Copyright © 2010 - 2019</b> Polban. <b>All Rights Reserved</b></p>
+        </div>
+
     </div>
 </body>
 
