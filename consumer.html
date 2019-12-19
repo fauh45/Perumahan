@@ -63,15 +63,15 @@
                             <div class='color color-a' id='color-a'></div>
                             <div class='color color-b' id='color-b'></div>
                         </div>
-                        <span class='small' style='color:#457'>TIPE: <span id='color-name'>BLUES / 2V5</span></span>
-                    </div>
+                        </div>
                     <div class='size-picker'>
                         <div class='range-picker' id='range-picker'>
-                            
+                            <span class='' style='color:#457; margin: 30px; font-size: 18px; font-weight: bold;'><span id='color-name'></span></span>
                         </div>
                     </div>
                 </div>
-                <div class='divider'></div>
+                <div class='divider'>
+                </div>
 
                 <div class='purchase-info'>
                     <div class='price' id='harga'></div>
@@ -116,12 +116,8 @@
                 <h2>Tipe Rumah</h2>
                 <div class="border"></div>
                 <ul>
-                    <a href="">
-                        <li>Tipe Rumah 1</li>
-                    </a>
-                    <a href="">
-                        <li>Tipe Rumah 2</li>
-                    </a>
+                    <li>Rumah Gadang</li>
+                    <li>Modern House</li>
                 </ul>
             </div>
 
@@ -164,7 +160,7 @@
     <script>
         function init() {
             document.getElementById('harga').innerHTML = "Rp " + (parseInt(localStorage.getItem('harga2')) + parseInt(localStorage.getItem('komisi2'))) / 1000000 + " Juta"
-            document.getElementById('color-name').innerHTML = "Tipe 2, luas " + localStorage.getItem('luas2')
+            document.getElementById('color-name').innerHTML = "Luas : " + localStorage.getItem('luas2') + " m2";
             document.getElementById('hometitle').innerHTML = "Modern House"
             document.getElementById('homedesc').innerHTML = "Elegant house classic style"
             document.getElementById('description').innerHTML = "Rumah modern yang terlihat elegan, memiliki gaya yang sangat berkelas, mewah serta menawan. memiliki jiwa futuristik dan tampil kelasik dengan gaya elegan yang membuat rumah ini jadi semakin menawan dan bisa di bilang rumah ini adalah rumah terbaik pilihan kami setelah rumah gadang"
@@ -201,11 +197,11 @@
             document.getElementById('background-element').style.backgroundColor = '#ED3237';
             document.getElementById('highlight-overlay').style.opacity = '1';
             document.getElementById('highlight-overlay-mobile').style.opacity = '1';
-            document.getElementById('color-name').innerHTML = "Tipe 1, luas " + localStorage.getItem('luas1');
-            document.getElementById('color-name').style.color = '#ed3237S'
+            document.getElementById('color-name').innerHTML = "Luas : " + localStorage.getItem('luas1') + " m2";
+            document.getElementById('color-name').style.color = '#ED3237'
             document.getElementById('harga').innerHTML = "Rp " + (parseInt(localStorage.getItem('harga1')) + parseInt(localStorage.getItem('komisi1'))) / 1000000 + " Juta"
             document.getElementById('hometitle').innerHTML = "Rumah Gadang"
-            document.getElementById('homedesc').innerHTML = "typical minimalist home padang"
+            document.getElementById('homedesc').innerHTML = "Typical Minimalist House Padang"
             document.getElementById('description').innerHTML = "Miliki rumah yang berbeda dari yang lain, tampil natural memiliki khas dari Sumatra Barat dan menjadi struktur yang sama, memiliki bentuk dan struktur yang khas dari sumatera barat "
             document.getElementById('sedia').value = localStorage.getItem('jumlah1');
         })
@@ -214,11 +210,11 @@
             document.getElementById('background-element').style.backgroundColor = '#457';
             document.getElementById('highlight-overlay').style.opacity = '0';
             document.getElementById('highlight-overlay-mobile').style.opacity = '0';
-            document.getElementById('color-name').innerHTML = "Tipe 2, luas " + localStorage.getItem('luas2');
+            document.getElementById('color-name').innerHTML = "Luas : " + localStorage.getItem('luas2') + " m2";
             document.getElementById('color-name').style.color = '#457'
             document.getElementById('harga').innerHTML = "Rp " + (parseInt(localStorage.getItem('harga2')) + parseInt(localStorage.getItem('komisi2'))) / 1000000 + " Juta"
             document.getElementById('hometitle').innerHTML = "Modern House"
-            document.getElementById('homedesc').innerHTML = "Elegant house classic style"
+            document.getElementById('homedesc').innerHTML = "Elegant House Classic Style"
             document.getElementById('description').innerHTML = "Rumah modern yang terlihat elegan, memiliki gaya yang sangat berkelas, mewah serta menawan. memiliki jiwa futuristik dan tampil kelasik dengan gaya elegan yang membuat rumah ini jadi semakin menawan dan bisa di bilang rumah ini adalah rumah terbaik pilihan kami setelah rumah gadang"
             document.getElementById('sedia').value = localStorage.getItem('jumlah2');
         })
