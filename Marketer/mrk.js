@@ -20,8 +20,8 @@ checkLocalSorage();
 
 // Show the price from localstorage
 function showprice() {
-    document.getElementById('harga1').innerHTML = localStorage.getItem('harga1');
-    document.getElementById('harga2').innerHTML = localStorage.getItem('harga2');
+    document.getElementById('harga1').innerHTML = parseInt(localStorage.getItem('harga1'));
+    document.getElementById('harga2').innerHTML = parseInt(localStorage.getItem('harga2'));
 }
 
 // Show the avability of tipe rumah
@@ -77,9 +77,9 @@ function calculate() {
     var totalTipe2 = (harga2 * n2) + (komisi2 * n2);
 
     // Put it onto HTMl
-    document.getElementById('totaltipe1').innerHTML = 'Rp. '+totalTipe1;
-    document.getElementById('totaltipe2').innerHTML = 'Rp. '+totalTipe2;
+    document.getElementById('totaltipe1').innerHTML = 'Rp. ' + totalTipe1;
+    document.getElementById('totaltipe2').innerHTML = 'Rp. ' + totalTipe2;
 
-    document.getElementById('totalsemua').innerHTML = 'Rp. '+(totalTipe1 + totalTipe2);
+    document.getElementById('totalsemua').innerHTML = 'Rp. ' + (totalTipe1 + totalTipe2);
     document.getElementById('totalkomisi').innerHTML = calculateProfitKomisi(n1, n2);
 }

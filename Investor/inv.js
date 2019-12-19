@@ -98,6 +98,10 @@ function calculate() {
     // Collect input
     getInput();
 
+    // Make sure it's zero
+    maxpos = [];
+    maxprofit = 0;
+
     // Profit model
     var multiplier = [keuntungan1 / 100 * modal1, keuntungan2 / 100 * modal2];
 
@@ -126,6 +130,7 @@ function calculate() {
         if (calcprofit(temppos, multiplier) > maxprofit) {
             maxpos = temppos;
             maxprofit = calcprofit(temppos, multiplier);
+            console.log(temppos);
         }
     }
 
@@ -139,6 +144,7 @@ function calculate() {
         if (calcprofit(temppos, multiplier) > maxprofit) {
             maxpos = temppos;
             maxprofit = calcprofit(temppos, multiplier);
+            console.log(temppos);
         }
     }
 
@@ -152,6 +158,7 @@ function calculate() {
         if (calcprofit(temppos, multiplier) > maxprofit) {
             maxpos = temppos;
             maxprofit = calcprofit(temppos, multiplier);
+            console.log(temppos);
         }
     }
 
@@ -165,6 +172,7 @@ function calculate() {
         if (calcprofit(temppos, multiplier) > maxprofit) {
             maxpos = temppos;
             maxprofit = calcprofit(temppos, multiplier);
+            console.log(temppos);
         }
     }
 
@@ -178,6 +186,7 @@ function calculate() {
         if (calcprofit(temppos, multiplier) > maxprofit) {
             maxpos = temppos;
             maxprofit = calcprofit(temppos, multiplier);
+            console.log(temppos);
         }
     }
 
@@ -191,6 +200,7 @@ function calculate() {
         if (calcprofit(temppos, multiplier) > maxprofit) {
             maxpos = temppos;
             maxprofit = calcprofit(temppos, multiplier);
+            console.log(temppos);
         }
     }
 
@@ -204,6 +214,7 @@ function calculate() {
         if (calcprofit(temppos, multiplier) > maxprofit) {
             maxpos = temppos;
             maxprofit = calcprofit(temppos, multiplier);
+            console.log(temppos);
         }
     }
 
@@ -217,6 +228,7 @@ function calculate() {
         if (calcprofit(temppos, multiplier) > maxprofit) {
             maxpos = temppos;
             maxprofit = calcprofit(temppos, multiplier);
+            console.log(temppos);
         }
     }
 
@@ -230,6 +242,7 @@ function calculate() {
         if (calcprofit(temppos, multiplier) > maxprofit) {
             maxpos = temppos;
             maxprofit = calcprofit(temppos, multiplier);
+            console.log(temppos);
         }
     }
 
