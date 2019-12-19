@@ -78,8 +78,8 @@ function tostorage(harga1, harga2, jumlah) {
     localStorage.setItem('harga1', harga1);
     localStorage.setItem('harga2', harga2);
 
-    localStorage.setItem('jumlah1', jumlah[0]);
-    localStorage.setItem('jumlah2', jumlah[1]);
+    localStorage.setItem('jumlah1', parseInt(jumlah[0]));
+    localStorage.setItem('jumlah2', parseInt(jumlah[1]));
 
     localStorage.setItem('luas1', luastanah1);
     localStorage.setItem('luas2', luastanah2);
